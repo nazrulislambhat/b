@@ -1,0 +1,272 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.slick-slider {
+  height: auto;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .slick-slider {
+    margin: 0px 16px;
+  }
+}
+@media (min-width: 1366px) {
+  .slick-slider {
+    gap: 32px;
+    margin: 0px auto;
+  }
+}
+.slick-slider .slick-track {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .slick-slider .slick-track {
+    gap: 16px;
+  }
+}
+@media (min-width: 1025px) {
+  .slick-slider .slick-track {
+    gap: 32px;
+  }
+}
+@media (min-width: 1366px) {
+  .slick-slider .slick-track {
+    gap: 42px;
+  }
+}
+.slick-slider .slick-prev::before {
+  content: "";
+  background: url("../../images/left-arrow.png");
+  background-position: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.slick-slider .slick-next::before {
+  content: "";
+  background: url("../../images/right-arrow.png");
+  background-position: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.slick-slider .slick-dots {
+  bottom: -40px;
+}
+.slick-slider .slick-dots li button::before {
+  font-size: 2rem;
+}
+.slick-slider .slick-list {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.slick-slider .slick-slide {
+  position: relative;
+  border: 1px solid #ced0d4;
+  border-radius: 5px;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .slick-slider .slick-slide {
+    width: auto !important;
+    max-width: 360px;
+    margin: 0;
+  }
+}
+@media (min-width: 1366px) {
+  .slick-slider .slick-slide {
+    width: auto !important;
+    max-width: 372px;
+    margin: 0;
+  }
+}
+.slick-slider .slick-slide .views-field-field-price {
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.slick-slider .slick-slide .views-field-field-card-image {
+  position: relative;
+  overflow: hidden;
+}
+.slick-slider .slick-slide .views-field-field-card-image img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+.slick-slider .slick-slide .views-field-field-card-image::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  background-color: #12d16f;
+  margin: -30px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+}
+.slick-slider .slick-slide .views-field-field-card-image::after {
+  content: "★";
+  position: absolute;
+  display: block;
+  color: white;
+  fill: white;
+  font-size: 0.8rem;
+  top: 0;
+  left: 0;
+  padding: 5px;
+}
+.slick-slider .slick-slide .views-field-field-card-title {
+  color: #414a55;
+  font-weight: 700;
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-right: 70px;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.slick-slider .slick-slide .views-field-field-category,
+.slick-slider .slick-slide .views-field-field-location,
+.slick-slider .slick-slide .views-field-field-date {
+  color: grey;
+  font-weight: 600;
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-right: 70px;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 8px;
+}
+.slick-slider .slick-slide .card-footer {
+  border-top: 1px solid #ced0d4;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.slick-slider .slick-slide .card-footer .card-download a {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  font-size: 0px;
+}
+.slick-slider .slick-slide .card-footer .card-download a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../../images/cloud-computing.png") no-repeat center center;
+  background-size: contain;
+}
+.slick-slider .slick-slide .card-footer .card-share,
+.slick-slider .slick-slide .card-footer .card-download,
+.slick-slider .slick-slide .card-footer .card-favourite {
+  height: 50px;
+  width: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ced0d4;
+}
+.slick-slider .slick-slide .card-footer .card-view-details {
+  margin: 0 auto;
+  padding: 0;
+}
+.slick-slider .slick-slide .card-footer .card-view-details a {
+  text-decoration: none;
+  color: #017fd5;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.slick-slider .slick-slide .card-footer .card-view-details a:hover {
+  text-decoration: underline;
+}
+.slick-slider .slick-slide .card-footer .card-view-details span {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.slick-slider .slick-slide .card-footer .card-share a {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  font-size: 0px;
+}
+.slick-slider .slick-slide .card-footer .card-share a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../../images/share-icon.png") no-repeat center center;
+  background-size: contain;
+}
+.slick-slider .slick-slide .card-footer .card-favourite a {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  color: transparent;
+  font-size: 0px;
+}
+.slick-slider .slick-slide .card-footer .card-favourite a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../../images/heart-icon.png") no-repeat center center;
+  background-size: contain;
+}
+.slick-slider .slick-slide .views-field-field-category::before {
+  content: "🏠";
+  display: block;
+  color: white;
+  fill: white;
+  font-size: 0.7rem;
+}
+.slick-slider .slick-slide .views-field-field-location {
+  margin-bottom: 15px;
+}
+.slick-slider .slick-slide .views-field-field-location::before {
+  content: "📍";
+  display: block;
+  color: white;
+  fill: white;
+  font-size: 0.7rem;
+}
+.slick-slider .slick-slide .views-field-field-date::before {
+  content: "📅";
+  display: block;
+  color: white;
+  fill: white;
+  font-size: 0.7rem;
+}
+/*# sourceMappingURL=conference-slider.css.map */

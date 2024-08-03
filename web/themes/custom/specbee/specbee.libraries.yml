@@ -1,0 +1,29 @@
+global:
+  css:
+    theme:
+      css/style.css: {}
+      css/fontawesome.min.css: {}
+  js:
+    js/script.js: {}
+
+slick:
+  version: 1.x
+  css:
+    theme:
+      libraries/slick/slick.css: {}
+      libraries/slick/slick-theme.css: {}
+  js:
+    libraries/slick/slick.min.js: {}
+    js/slick-init.js: {}
+  dependencies:
+    - core/jquery
+
+conference-slider:
+  css:
+    theme:
+      css/components/conference-slider.css: {}
+
+  js:
+    js/script.js: {}
+  dependencies:
+    - specbee/slick

@@ -1,0 +1,266 @@
+@import "../main.scss";
+
+.slick-slider {
+  height: auto;
+  max-width: 1366px;
+  margin: 0 auto;
+  @include breakpoint(tablet) {
+    margin: 0px 16px;
+  }
+  @include breakpoint(desktop) {
+    gap: 32px;
+    margin: 0px auto;
+  }
+  .slick-track {
+    display: flex;
+    @include breakpoint(tablet) {
+      gap: 16px;
+    }
+    @include breakpoint(small-desktop) {
+      gap: 32px;
+    }
+    @include breakpoint(desktop) {
+      gap: 42px;
+    }
+  }
+  .slick-prev {
+    &::before {
+      content: "";
+      background: url("../../images/left-arrow.png");
+      background-position: center;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+  }
+  .slick-next {
+    &::before {
+      content: "";
+      background: url("../../images/right-arrow.png");
+      background-position: center;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
+      display: block;
+    }
+  }
+  .slick-dots {
+    bottom: -40px;
+    li {
+      button::before {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .slick-list {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .slick-slide {
+    position: relative;
+    border: 1px solid $grey-color;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
+    width: 100%;
+    overflow: hidden;
+    @include breakpoint(tablet) {
+      width: auto !important;
+      max-width: 360px;
+      margin: 0;
+    }
+    @include breakpoint(desktop) {
+      width: auto !important;
+      max-width: 372px;
+      margin: 0;
+    }
+    .views-field-field-price {
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 12px;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 999;
+    }
+    .views-field-field-card-image {
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 0;
+        padding: 5px;
+        background-color: $green-color;
+        margin: -30px;
+        width: 50px;
+        height: 50px;
+        transform: rotate(45deg);
+      }
+      &::after {
+        content: "★";
+        position: absolute;
+        display: block;
+        color: white;
+        fill: white;
+        font-size: 0.8rem;
+        top: 0;
+        left: 0;
+        padding: 5px;
+      }
+    }
+    .views-field-field-card-title {
+      color: $dark-grey-color;
+      font-weight: 700;
+      margin-top: 10px;
+      padding-left: 30px;
+      padding-right: 70px;
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+    .views-field-field-category,
+    .views-field-field-location,
+    .views-field-field-date {
+      color: grey;
+      font-weight: 600;
+      margin-top: 10px;
+      padding-left: 30px;
+      padding-right: 70px;
+      font-size: 0.9rem;
+      display: flex;
+      gap: 8px;
+    }
+
+    .card-footer {
+      border-top: 1px solid $grey-color;
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      .card-download a {
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        color: transparent;
+        font-size: 0px;
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url("../../images/cloud-computing.png") no-repeat center
+            center;
+          background-size: contain;
+        }
+      }
+      .card-share,
+      .card-download,
+      .card-favourite {
+        height: 50px;
+        width: 72px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid $grey-color;
+      }
+      .card-view-details {
+        margin: 0 auto;
+        padding: 0;
+
+        a {
+          text-decoration: none;
+          color: $blue-color;
+          font-weight: 600;
+          font-size: 0.9rem;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        span {
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 0.9rem;
+        }
+      }
+      .card-share a {
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        color: transparent;
+        font-size: 0px;
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url("../../images/share-icon.png") no-repeat center center;
+          background-size: contain;
+        }
+      }
+      .card-favourite a {
+        display: inline-block;
+        text-decoration: none;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        color: transparent;
+        font-size: 0px;
+        &::before {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: url("../../images/heart-icon.png") no-repeat center center;
+          background-size: contain;
+        }
+      }
+    }
+    .views-field-field-category {
+      &::before {
+        content: "🏠";
+        display: block;
+        color: white;
+        fill: white;
+        font-size: 0.7rem;
+      }
+    }
+    .views-field-field-location {
+      margin-bottom: 15px;
+      &::before {
+        content: "📍";
+        display: block;
+        color: white;
+        fill: white;
+        font-size: 0.7rem;
+      }
+    }
+    .views-field-field-date {
+      &::before {
+        content: "📅";
+        display: block;
+        color: white;
+        fill: white;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
