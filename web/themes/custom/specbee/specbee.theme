@@ -21,3 +21,20 @@ function specbee_preprocess_block(&$variables) {
   $variables['past'] = views_embed_view('past_conferences', 'past_conferences');
   $variables['recommended'] = views_embed_view('recommended_conferences', 'recommended_conferences');
 }
+
+function specbee_preprocess_views_view(&$variables) {
+  // Get the view ID from the view object.
+  $view_id = $variables['view']->id();
+
+  // Check if the view ID matches any of the target views.
+  $target_views = [
+    'past_conferences',
+    'featured_conferences',
+    'recommended_conferences',
+  ];
+
+  // Attach the conference-slider library if the view ID matches.
+  if (in_array($view_id, $target_views)) {
+    $variables['#attached']['library'][] = 'specbee/conference-slider';
+  }
+}

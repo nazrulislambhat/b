@@ -13,8 +13,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* themes/custom/specbee/templates/views-view-unformatted--recommended-conferences.html.twig */
-class __TwigTemplate_294a356ad67de25090adb462b20639f8 extends Template
+/* core/themes/stable9/templates/views/views-view-unformatted.html.twig */
+class __TwigTemplate_72c0b1ff618bb203ee3ff1312955be21 extends Template
 {
     private $source;
     private $macros = [];
@@ -37,36 +37,30 @@ class __TwigTemplate_294a356ad67de25090adb462b20639f8 extends Template
     {
         $macros = $this->macros;
         // line 18
-        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->extensions['Drupal\Core\Template\TwigExtension']->attachLibrary("specbee/conference-slider"), "html", null, true);
-        yield "
-
-";
-        // line 20
         if (($context["title"] ?? null)) {
-            // line 21
+            // line 19
             yield "  <h3>";
-            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title"] ?? null), 21, $this->source), "html", null, true);
+            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title"] ?? null), 19, $this->source), "html", null, true);
             yield "</h3>
 ";
         }
-        // line 23
+        // line 21
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable(($context["rows"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["row"]) {
-            // line 24
+            // line 22
             yield "  ";
-            // line 25
-            $context["row_classes"] = [((            // line 26
+            // line 23
+            $context["row_classes"] = [((            // line 24
 ($context["default_row_class"] ?? null)) ? ("views-row") : (""))];
-            // line 29
+            // line 27
             yield "  <div";
-            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["row"], "attributes", [], "any", false, false, true, 29), "addClass", [($context["row_classes"] ?? null)], "method", false, false, true, 29), 29, $this->source), "html", null, true);
-            yield "> 
-      ";
-            // line 30
-            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(CoreExtension::getAttribute($this->env, $this->source, $context["row"], "content", [], "any", false, false, true, 30), 30, $this->source), "html", null, true);
-            yield "
-  </div>
+            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, $context["row"], "attributes", [], "any", false, false, true, 27), "addClass", [($context["row_classes"] ?? null)], "method", false, false, true, 27), 27, $this->source), "html", null, true);
+            yield ">";
+            // line 28
+            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(CoreExtension::getAttribute($this->env, $this->source, $context["row"], "content", [], "any", false, false, true, 28), 28, $this->source), "html", null, true);
+            // line 29
+            yield "</div>
 ";
         }
         $_parent = $context['_parent'];
@@ -81,7 +75,7 @@ class __TwigTemplate_294a356ad67de25090adb462b20639f8 extends Template
      */
     public function getTemplateName()
     {
-        return "themes/custom/specbee/templates/views-view-unformatted--recommended-conferences.html.twig";
+        return "core/themes/stable9/templates/views/views-view-unformatted.html.twig";
     }
 
     /**
@@ -97,7 +91,7 @@ class __TwigTemplate_294a356ad67de25090adb462b20639f8 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  67 => 30,  62 => 29,  60 => 26,  59 => 25,  57 => 24,  53 => 23,  47 => 21,  45 => 20,  40 => 18,);
+        return array (  63 => 29,  61 => 28,  57 => 27,  55 => 24,  54 => 23,  52 => 22,  48 => 21,  42 => 19,  40 => 18,);
     }
 
     public function getSourceContext()
@@ -119,8 +113,6 @@ class __TwigTemplate_294a356ad67de25090adb462b20639f8 extends Template
  * @see template_preprocess_views_view_unformatted()
  */
 #}
-{{ attach_library('specbee/conference-slider') }}
-
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
@@ -130,24 +122,24 @@ class __TwigTemplate_294a356ad67de25090adb462b20639f8 extends Template
       default_row_class ? 'views-row',
     ]
   %}
-  <div{{ row.attributes.addClass(row_classes) }}> 
-      {{ row.content }}
+  <div{{ row.attributes.addClass(row_classes) }}>
+    {{- row.content -}}
   </div>
 {% endfor %}
-", "themes/custom/specbee/templates/views-view-unformatted--recommended-conferences.html.twig", "/var/www/html/web/themes/custom/specbee/templates/views-view-unformatted--recommended-conferences.html.twig");
+", "core/themes/stable9/templates/views/views-view-unformatted.html.twig", "/var/www/html/web/core/themes/stable9/templates/views/views-view-unformatted.html.twig");
     }
     
     public function checkSecurity()
     {
-        static $tags = array("if" => 20, "for" => 23, "set" => 25);
-        static $filters = array("escape" => 18);
-        static $functions = array("attach_library" => 18);
+        static $tags = array("if" => 18, "for" => 21, "set" => 23);
+        static $filters = array("escape" => 19);
+        static $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 ['if', 'for', 'set'],
                 ['escape'],
-                ['attach_library'],
+                [],
                 $this->source
             );
         } catch (SecurityError $e) {

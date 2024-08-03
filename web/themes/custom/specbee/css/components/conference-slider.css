@@ -121,6 +121,9 @@
 .slick-slider .slick-slide:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+.slick-slider .slick-slide:hover .views-field-field-card-image {
+  transform: scale(1.2);
+}
 .slick-slider .slick-slide:hover .card-body {
   transform: translateY(-60px);
   height: 131px;
@@ -162,6 +165,7 @@
 .slick-slider .slick-slide .views-field-field-card-image {
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 .slick-slider .slick-slide .views-field-field-card-image img {
   width: 100%;
