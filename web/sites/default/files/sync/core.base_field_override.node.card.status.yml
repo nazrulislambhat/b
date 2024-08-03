@@ -1,0 +1,22 @@
+uuid: 58d0c160-0cc4-4fff-963e-dafacdac22ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.card
+id: node.card.status
+field_name: status
+entity_type: node
+bundle: card
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

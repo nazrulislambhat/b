@@ -1,0 +1,42 @@
+uuid: 56427314-0391-44fd-beb9-d7f1bb2c620e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.card.field_card_image
+    - field.field.node.card.field_card_title
+    - field.field.node.card.field_category
+    - field.field.node.card.field_date
+    - field.field.node.card.field_download
+    - field.field.node.card.field_favourite
+    - field.field.node.card.field_location
+    - field.field.node.card.field_price
+    - field.field.node.card.field_share
+    - field.field.node.card.field_type
+    - field.field.node.card.field_view_details
+    - node.type.card
+  module:
+    - user
+id: node.card.teaser
+targetEntityType: node
+bundle: card
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_card_image: true
+  field_card_title: true
+  field_category: true
+  field_date: true
+  field_download: true
+  field_favourite: true
+  field_location: true
+  field_price: true
+  field_share: true
+  field_type: true
+  field_view_details: true

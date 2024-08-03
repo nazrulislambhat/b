@@ -1,0 +1,30 @@
+uuid: 3008a46c-90f4-46bd-8f28-2a65a788ecc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: featured
+      label: Featured
+    -
+      value: past
+      label: Past
+    -
+      value: recommended
+      label: Recommended
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

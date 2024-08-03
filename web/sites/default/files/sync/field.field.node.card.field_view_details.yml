@@ -1,0 +1,23 @@
+uuid: c1b2f197-07b4-401d-bbf3-d2289a29ad2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_view_details
+    - node.type.card
+  module:
+    - link
+id: node.card.field_view_details
+field_name: field_view_details
+entity_type: node
+bundle: card
+label: 'View Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

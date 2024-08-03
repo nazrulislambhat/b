@@ -1,0 +1,19 @@
+uuid: 1deaecc4-74e8-4fa5-bc19-e3119aa1f7be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_title
+    - node.type.card
+id: node.card.field_card_title
+field_name: field_card_title
+entity_type: node
+bundle: card
+label: 'Card Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

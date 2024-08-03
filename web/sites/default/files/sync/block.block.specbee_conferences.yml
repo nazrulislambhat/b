@@ -1,0 +1,25 @@
+uuid: 2194a502-a37c-4e1f-b608-8ea9fb24fe87
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b43e4b78-a762-41e3-8670-2b3159ebb578'
+  module:
+    - block_content
+  theme:
+    - specbee
+id: specbee_conferences
+theme: specbee
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:b43e4b78-a762-41e3-8670-2b3159ebb578'
+settings:
+  id: 'block_content:b43e4b78-a762-41e3-8670-2b3159ebb578'
+  label: Conferences
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

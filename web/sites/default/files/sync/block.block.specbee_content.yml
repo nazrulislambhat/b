@@ -1,0 +1,22 @@
+uuid: 52dc4893-f75f-4fce-9e26-1b230de1cfd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - specbee
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: specbee_content
+theme: specbee
+region: footer
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

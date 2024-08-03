@@ -1,0 +1,23 @@
+uuid: 2c109100-508c-4c6b-81fb-369ace1024c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.card
+id: node.card.field_price
+field_name: field_price
+entity_type: node
+bundle: card
+label: Price
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 99999
+  prefix: ''
+  suffix: ''
+field_type: integer

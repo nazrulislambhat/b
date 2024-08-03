@@ -40,15 +40,15 @@
       <p class="conferences_subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class="slider-container">
         <div class="tabs">
-          <button class="tab-button active">Featured Conferences</button>
-          <button class="tab-button">Recommended Conferences</button>
+         <button class="tab-button active">Recommended Conferences</button>
+          <button class="tab-button">Featured Conferences</button>
           <button class="tab-button">Past Conferences</button>
         </div>
-        <div class="conference-slider featured-conferences active">
-          {{ featured }}
-        </div>
-        <div class="conference-slider recommended-conferences">
+        <div class="conference-slider recommended-conferences active">
           {{ recommended }}
+        </div>
+        <div class="conference-slider featured-conferences">
+          {{ featured }}
         </div>
         <div class="conference-slider past-conferences">
           {{ past }}

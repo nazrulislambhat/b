@@ -1,0 +1,23 @@
+uuid: f7dfcb46-9017-4aee-a75a-c3de4e09f8bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_favourite
+    - node.type.card
+  module:
+    - link
+id: node.card.field_favourite
+field_name: field_favourite
+entity_type: node
+bundle: card
+label: Favourite
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

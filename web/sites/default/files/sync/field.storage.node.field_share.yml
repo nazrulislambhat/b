@@ -1,0 +1,19 @@
+uuid: 8e0daede-4240-4851-bba8-127f8bdbf504
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_share
+field_name: field_share
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
