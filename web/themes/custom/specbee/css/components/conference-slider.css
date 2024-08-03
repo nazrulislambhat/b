@@ -19,7 +19,7 @@
 @media (min-width: 1366px) {
   .slick-slider {
     gap: 32px;
-    margin: 0px auto;
+    margin: 50px auto;
   }
 }
 .slick-slider .slick-track {
@@ -38,6 +38,7 @@
 @media (min-width: 1366px) {
   .slick-slider .slick-track {
     gap: 42px;
+    margin: 25px 0px;
   }
 }
 .slick-slider .slick-prev::before {
@@ -71,6 +72,8 @@
 .slick-slider .slick-list {
   max-width: 1280px;
   margin: 0 auto;
+  margin: 30px 0px;
+  min-height: 430px;
 }
 .slick-slider .slick-slide {
   position: relative;
@@ -80,6 +83,16 @@
   cursor: pointer;
   width: 100%;
   overflow: hidden;
+  transition: height 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.slick-slider .slick-slide:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+}
+.slick-slider .slick-slide:hover .card-footer {
+  height: auto;
+  opacity: 1;
 }
 @media (min-width: 768px) {
   .slick-slider .slick-slide {
@@ -165,6 +178,9 @@
   display: flex;
   align-items: center;
   margin-top: 15px;
+  height: 0;
+  opacity: 0;
+  transition: transform 0.5s ease, height 0.5s ease;
 }
 .slick-slider .slick-slide .card-footer .card-download a {
   display: inline-block;

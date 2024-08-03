@@ -13,8 +13,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* __string_template__d7d7f1a462505651fc222178924da388 */
-class __TwigTemplate_89e6e9be4e50f203e842f6e53f11f9ac extends Template
+/* core/themes/stable9/templates/media-library/feed-icon.html.twig */
+class __TwigTemplate_2205f67dafec14723d172872c65028f9 extends Template
 {
     private $source;
     private $macros = [];
@@ -36,10 +36,20 @@ class __TwigTemplate_89e6e9be4e50f203e842f6e53f11f9ac extends Template
     protected function doDisplay(array $context, array $blocks = [])
     {
         $macros = $this->macros;
-        // line 1
-        yield $this->extensions['Drupal\Core\Template\TwigExtension']->renderVar($this->extensions['Drupal\Core\Template\TwigExtension']->safeJoin($this->env, $this->sandbox->ensureToStringAllowed(($context["items"] ?? null), 1, $this->source), $this->sandbox->ensureToStringAllowed(($context["separator"] ?? null), 1, $this->source)));
+        // line 14
+        yield "<a href=\"";
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["url"] ?? null), 14, $this->source), "html", null, true);
+        yield "\"";
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(CoreExtension::getAttribute($this->env, $this->source, ($context["attributes"] ?? null), "addClass", ["feed-icon"], "method", false, false, true, 14), 14, $this->source), "html", null, true);
+        yield ">
+  ";
+        // line 15
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->renderVar(t("Subscribe to @title", ["@title" => ($context["title"] ?? null)]));
+        yield "
+</a>
+";
         $this->env->getExtension('\Drupal\Core\Template\TwigExtension')
-            ->checkDeprecations($context, ["items", "separator"]);        return; yield '';
+            ->checkDeprecations($context, ["url", "attributes", "title"]);        return; yield '';
     }
 
     /**
@@ -47,7 +57,7 @@ class __TwigTemplate_89e6e9be4e50f203e842f6e53f11f9ac extends Template
      */
     public function getTemplateName()
     {
-        return "__string_template__d7d7f1a462505651fc222178924da388";
+        return "core/themes/stable9/templates/media-library/feed-icon.html.twig";
     }
 
     /**
@@ -63,24 +73,40 @@ class __TwigTemplate_89e6e9be4e50f203e842f6e53f11f9ac extends Template
      */
     public function getDebugInfo()
     {
-        return array (  40 => 1,);
+        return array (  47 => 15,  40 => 14,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{# inline_template_start #}{{ items | safe_join(separator) }}", "__string_template__d7d7f1a462505651fc222178924da388", "");
+        return new Source("{#
+/**
+ * @file
+ * Theme override for a feed icon.
+ *
+ * Available variables:
+ * - url: An internal system path or a fully qualified external URL of the feed.
+ * - title: Title of the feed for describing the feed on the subscribe link.
+ * - attributes: Remaining HTML attributes for the feed link.
+ *   - title: A descriptive title of the feed link.
+ *   - class: HTML classes to be applied to the feed link.
+ */
+#}
+<a href=\"{{ url }}\"{{ attributes.addClass('feed-icon') }}>
+  {{ 'Subscribe to @title'|t({'@title': title}) }}
+</a>
+", "core/themes/stable9/templates/media-library/feed-icon.html.twig", "/var/www/html/web/core/themes/stable9/templates/media-library/feed-icon.html.twig");
     }
     
     public function checkSecurity()
     {
         static $tags = array();
-        static $filters = array("safe_join" => 1);
+        static $filters = array("escape" => 14, "t" => 15);
         static $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 [],
-                ['safe_join'],
+                ['escape', 't'],
                 [],
                 $this->source
             );
