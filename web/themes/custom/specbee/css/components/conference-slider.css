@@ -6,9 +6,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.featured-conferences .slick-list .slick-slide .conferences-card .views-field-field-card-image::before,
-.past-conferences .slick-list .slick-slide .conferences-card .views-field-field-card-image::before {
+.featured-conferences .slick-list .slick-slide .conferences-card::before,
+.past-conferences .slick-list .slick-slide .conferences-card::before {
   background-color: #017fd5;
+  z-index: 8;
 }
 
 .featured-conferences .slick-dots {
@@ -19,9 +20,10 @@
 .past-conferences .slick-dots {
   bottom: -40px;
 }
-.recommended-conferences .slick-list .slick-slide .conferences-card .views-field-field-card-image::before,
-.past-conferences .slick-list .slick-slide .conferences-card .views-field-field-card-image::before {
+.recommended-conferences .slick-list .slick-slide .conferences-card::before,
+.past-conferences .slick-list .slick-slide .conferences-card::before {
   background-color: #12d16f;
+  z-index: 9;
 }
 
 .slick-slider {
@@ -122,10 +124,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .slick-slider .slick-slide:hover .views-field-field-card-image {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .slick-slider .slick-slide:hover .card-body {
-  transform: translateY(-60px);
+  transform: translateY(-50px);
   height: 131px;
 }
 .slick-slider .slick-slide:hover .card-footer {
@@ -172,29 +174,6 @@
   max-height: 200px;
   object-fit: cover;
 }
-.slick-slider .slick-slide .views-field-field-card-image::before {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  margin: -30px;
-  width: 50px;
-  height: 50px;
-  transform: rotate(45deg);
-}
-.slick-slider .slick-slide .views-field-field-card-image::after {
-  content: "★";
-  position: absolute;
-  display: block;
-  color: white;
-  fill: white;
-  font-size: 0.8rem;
-  top: 0;
-  left: 0;
-  padding: 5px;
-}
 .slick-slider .slick-slide .card-body {
   padding-left: 30px;
   background-color: white;
@@ -223,7 +202,7 @@
   align-items: center;
   height: 0;
   opacity: 0;
-  transition: transform 0.3s ease, height 0.3s ease;
+  transition: transform 0.5s ease, height 0.5s ease, opacity 0.5s ease;
 }
 .slick-slider .slick-slide .card-footer .card-download a {
   display: inline-block;
@@ -342,5 +321,29 @@
   display: block;
   background: url("../../images/icons8-calendar-100.png") no-repeat center center;
   background-size: contain;
+}
+.slick-slider .slick-slide .conferences-card::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  margin: -30px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(45deg);
+}
+.slick-slider .slick-slide .conferences-card::after {
+  content: "★";
+  position: absolute;
+  display: block;
+  color: white;
+  fill: white;
+  font-size: 0.8rem;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  z-index: 9;
 }
 /*# sourceMappingURL=conference-slider.css.map */
