@@ -10,21 +10,24 @@
   &_heading {
     text-align: center;
     color: $dark-grey-color;
-    letter-spacing: 0.2rem;
-    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
     font-size: 1.5rem;
+    padding-bottom: 10px;
     @include breakpoint(small-desktop) {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      padding-bottom: 10px;
     }
   }
   &_subheading {
     text-align: center;
-    color: $dark-grey-color;
+    color: $grey-color;
     padding: 10px 0px;
-    font-size: 1rem;
-    padding-bottom: 40px;
+    font-size: 1.1rem;
+    padding-bottom: 30px;
+
     @include breakpoint(small-desktop) {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       padding-bottom: 25px;
     }
   }
@@ -34,6 +37,12 @@
     height: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    .slick-dotted.slick-slider {
+      margin-bottom: 100px;
+      @include breakpoint(small-desktop) {
+        margin-bottom: auto;
+      }
+    }
   }
   .conference-slider.active {
     opacity: 1;
@@ -43,15 +52,21 @@
   }
   .tabs {
     text-align: center;
-    margin: 20px auto;
+    margin: 20px 15px;
     display: flex;
-    gap: 0px;
+    gap: 10px;
     text-align: center;
     justify-content: center;
     border-bottom: 2px solid $blue-color;
     padding-bottom: 20px;
+    max-width: 1336px;
+    @include breakpoint(tablet) {
+      gap: 40px;
+      margin: 20px auto;
+    }
     @include breakpoint(small-desktop) {
       gap: 60px;
+      margin: 20px auto;
     }
     .tab-button {
       cursor: pointer;
@@ -69,8 +84,10 @@
 
     .tab-button.active {
       color: $dark-grey-color;
-      font-size: 1.5rem;
-
+      font-size: 1.2rem;
+      @include breakpoint(small-desktop) {
+        font-size: 1.4rem;
+      }
       &::after {
         content: "";
         width: 20px;
@@ -81,7 +98,13 @@
         background-color: transparent;
         left: 42%;
         transform: rotate(45deg);
-        top: 37px;
+        top: 53px;
+        @include breakpoint(tablet) {
+          top: 31px;
+        }
+        @include breakpoint(small-desktop) {
+          top: 35px;
+        }
       }
       &::before {
         content: "";
@@ -92,8 +115,14 @@
         position: absolute;
         left: 42%;
         z-index: 9;
-        top: 32px;
+        top: 48px;
         transform: rotate(45deg);
+        @include breakpoint(tablet) {
+          top: 26px;
+        }
+        @include breakpoint(small-desktop) {
+          top: 30px;
+        }
       }
     }
   }

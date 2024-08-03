@@ -14,7 +14,7 @@
         {
           breakpoint: 1025,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
             arrows: false,
@@ -27,7 +27,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
-            dots: false,
+            dots: true,
             arrows: false,
           },
         },

@@ -19,25 +19,27 @@
 .conferences_heading {
   text-align: center;
   color: #414a55;
-  letter-spacing: 0.2rem;
-  font-weight: 600;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
   font-size: 1.5rem;
+  padding-bottom: 10px;
 }
 @media (min-width: 1025px) {
   .conferences_heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    padding-bottom: 10px;
   }
 }
 .conferences_subheading {
   text-align: center;
-  color: #414a55;
+  color: #a9a9a9;
   padding: 10px 0px;
-  font-size: 1rem;
-  padding-bottom: 40px;
+  font-size: 1.1rem;
+  padding-bottom: 30px;
 }
 @media (min-width: 1025px) {
   .conferences_subheading {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding-bottom: 25px;
   }
 }
@@ -48,6 +50,14 @@
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+.conferences .conference-slider .slick-dotted.slick-slider {
+  margin-bottom: 100px;
+}
+@media (min-width: 1025px) {
+  .conferences .conference-slider .slick-dotted.slick-slider {
+    margin-bottom: auto;
+  }
+}
 .conferences .conference-slider.active {
   opacity: 1;
   height: auto;
@@ -56,17 +66,25 @@
 }
 .conferences .tabs {
   text-align: center;
-  margin: 20px auto;
+  margin: 20px 15px;
   display: flex;
-  gap: 0px;
+  gap: 10px;
   text-align: center;
   justify-content: center;
   border-bottom: 2px solid #017fd5;
   padding-bottom: 20px;
+  max-width: 1336px;
+}
+@media (min-width: 768px) {
+  .conferences .tabs {
+    gap: 40px;
+    margin: 20px auto;
+  }
 }
 @media (min-width: 1025px) {
   .conferences .tabs {
     gap: 60px;
+    margin: 20px auto;
   }
 }
 .conferences .tabs .tab-button {
@@ -86,7 +104,12 @@
 }
 .conferences .tabs .tab-button.active {
   color: #414a55;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+}
+@media (min-width: 1025px) {
+  .conferences .tabs .tab-button.active {
+    font-size: 1.4rem;
+  }
 }
 .conferences .tabs .tab-button.active::after {
   content: "";
@@ -98,7 +121,17 @@
   background-color: transparent;
   left: 42%;
   transform: rotate(45deg);
-  top: 37px;
+  top: 53px;
+}
+@media (min-width: 768px) {
+  .conferences .tabs .tab-button.active::after {
+    top: 31px;
+  }
+}
+@media (min-width: 1025px) {
+  .conferences .tabs .tab-button.active::after {
+    top: 35px;
+  }
 }
 .conferences .tabs .tab-button.active::before {
   content: "";
@@ -109,7 +142,17 @@
   position: absolute;
   left: 42%;
   z-index: 9;
-  top: 32px;
+  top: 48px;
   transform: rotate(45deg);
+}
+@media (min-width: 768px) {
+  .conferences .tabs .tab-button.active::before {
+    top: 26px;
+  }
+}
+@media (min-width: 1025px) {
+  .conferences .tabs .tab-button.active::before {
+    top: 30px;
+  }
 }
 /*# sourceMappingURL=conferences.css.map */

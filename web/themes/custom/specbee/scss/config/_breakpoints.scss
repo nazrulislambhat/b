@@ -2,7 +2,7 @@ $breakpoints: (
   mobile: 0,
   tablet: 768px,
   small-desktop: 1025px,
-  desktop: 1366px,
+  desktop: 1440px,
 );
 
 @mixin breakpoint($device) {
@@ -22,7 +22,7 @@ $breakpoints: (
       @content;
     }
   } @else if $device == desktop {
-    @media (min-width: 1366px) {
+    @media (min-width: 1440px) {
       @content;
     }
   } @else {
