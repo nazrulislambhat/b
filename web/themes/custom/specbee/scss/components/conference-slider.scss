@@ -1,5 +1,31 @@
 @import "../main.scss";
-
+.featured-conferences,
+.past-conferences {
+  .slick-list {
+    .slick-slide {
+      .conferences-card {
+        .views-field-field-card-image {
+          &::before {
+            background-color: $blue-color;
+          }
+        }
+      }
+    }
+  }
+}
+.recommended-conferences {
+  .slick-list {
+    .slick-slide {
+      .conferences-card {
+        .views-field-field-card-image {
+          &::before {
+            background-color: $green-color;
+          }
+        }
+      }
+    }
+  }
+}
 .slick-slider {
   height: auto;
   max-width: 1366px;
@@ -9,7 +35,8 @@
   }
   @include breakpoint(desktop) {
     gap: 32px;
-    margin: 50px auto;
+    margin: 0px auto;
+    margin-bottom: 80px !important;
   }
   .slick-track {
     display: flex;
@@ -20,7 +47,7 @@
       gap: 32px;
     }
     @include breakpoint(desktop) {
-      gap: 42px;
+      gap: 47px;
       margin: 25px 0px;
     }
   }
@@ -51,20 +78,30 @@
     }
   }
   .slick-dots {
-    bottom: -40px;
+    bottom: -45px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
     li {
       button::before {
-        font-size: 2rem;
+        content: "";
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 3px solid $blue-color;
       }
+    }
+    li.slick-active button::before {
+      background-color: $blue-color;
+      opacity: 1;
     }
   }
 
   .slick-list {
     max-width: 1280px;
     margin: 0 auto;
-    margin: 30px 0px;
-    min-height: 430px;
   }
+
   .slick-slide {
     position: relative;
     border: 1px solid $grey-color;
@@ -73,11 +110,11 @@
     cursor: pointer;
     width: 100%;
     overflow: hidden;
-    transition: height 0.3s ease; // Smooth height transition
-    transition: transform 0.3s ease; // Smooth height transition
+    transition: height 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease;
     &:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      transform: scale(1.1);
       .card-footer {
         height: auto;
         opacity: 1;
@@ -93,6 +130,7 @@
       max-width: 372px;
       margin: 0;
     }
+
     .views-field-field-price {
       color: white;
       border: 1px solid white;
@@ -116,16 +154,16 @@
         content: "";
         position: absolute;
         display: block;
-
         top: 0;
         left: 0;
         padding: 5px;
-        background-color: $green-color;
+
         margin: -30px;
         width: 50px;
         height: 50px;
         transform: rotate(45deg);
       }
+
       &::after {
         content: "★";
         position: absolute;
@@ -141,7 +179,7 @@
     .views-field-field-card-title {
       color: $dark-grey-color;
       font-weight: 700;
-      margin-top: 10px;
+      margin-top: 25px;
       padding-left: 30px;
       padding-right: 70px;
       font-size: 1.2rem;
@@ -152,7 +190,7 @@
     .views-field-field-date {
       color: grey;
       font-weight: 600;
-      margin-top: 10px;
+      margin-top: 15px;
       padding-left: 30px;
       padding-right: 70px;
       font-size: 0.9rem;
@@ -167,7 +205,7 @@
       margin-top: 15px;
       height: 0;
       opacity: 0;
-      transition: transform 0.5s ease, height 0.5s ease; // Smooth reveal transition
+      transition: transform 0.5s ease, height 0.5s ease;
       .card-download a {
         display: inline-block;
         text-decoration: none;
@@ -184,7 +222,13 @@
           background: url("../../images/cloud-computing.png") no-repeat center
             center;
           background-size: contain;
+          transition: background 0.3s ease;
         }
+      }
+      .card-download a:hover::before {
+        background: url("../../images/cloud-computing-blue.png") no-repeat
+          center center;
+        background-size: contain;
       }
       .card-share,
       .card-download,
@@ -230,7 +274,13 @@
           height: 100%;
           background: url("../../images/share-icon.png") no-repeat center center;
           background-size: contain;
+          transition: background 0.3s ease;
         }
+      }
+      .card-share a:hover::before {
+        background: url("../../images/share-icon-blue.png") no-repeat center
+          center;
+        background-size: contain;
       }
       .card-favourite a {
         display: inline-block;
@@ -247,7 +297,13 @@
           height: 100%;
           background: url("../../images/heart-icon.png") no-repeat center center;
           background-size: contain;
+          transition: background 0.3s ease;
         }
+      }
+      .card-favourite a:hover::before {
+        background: url("../../images/heart-icon-blue.png") no-repeat center
+          center;
+        background-size: contain;
       }
     }
     .views-field-field-category {

@@ -1,0 +1,100 @@
+@import "../main.scss";
+.conferences {
+  padding-top: 20px;
+  .slider-container {
+    height: 100vh;
+  }
+  @include breakpoint(small-desktop) {
+    padding-top: 60px;
+  }
+  &_heading {
+    text-align: center;
+    color: $dark-grey-color;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    @include breakpoint(small-desktop) {
+      font-size: 2.5rem;
+    }
+  }
+  &_subheading {
+    text-align: center;
+    color: $dark-grey-color;
+    padding: 10px 0px;
+    font-size: 1rem;
+    padding-bottom: 40px;
+    @include breakpoint(small-desktop) {
+      font-size: 1.2rem;
+      padding-bottom: 25px;
+    }
+  }
+  .conference-slider {
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .conference-slider.active {
+    opacity: 1;
+    height: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .tabs {
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    gap: 0px;
+    text-align: center;
+    justify-content: center;
+    border-bottom: 2px solid $blue-color;
+    padding-bottom: 20px;
+    @include breakpoint(small-desktop) {
+      gap: 60px;
+    }
+    .tab-button {
+      cursor: pointer;
+      color: $blue-color;
+      background-color: transparent;
+      border: 0px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease, background 0.3s ease;
+      @include breakpoint(small-desktop) {
+        font-size: 1rem;
+      }
+    }
+
+    .tab-button.active {
+      color: $dark-grey-color;
+      font-size: 1.5rem;
+
+      &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        border: 2px solid $blue-color;
+        display: inline-block;
+        position: absolute;
+        background-color: transparent;
+        left: 42%;
+        transform: rotate(45deg);
+        top: 37px;
+      }
+      &::before {
+        content: "";
+        width: 25px;
+        height: 26px;
+        background: white;
+        display: inline-block;
+        position: absolute;
+        left: 42%;
+        z-index: 9;
+        top: 32px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

@@ -6,6 +6,15 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.featured-conferences .slick-list .slick-slide .conferences-card .views-field-field-card-image::before,
+.past-conferences .slick-list .slick-slide .conferences-card .views-field-field-card-image::before {
+  background-color: #017fd5;
+}
+
+.recommended-conferences .slick-list .slick-slide .conferences-card .views-field-field-card-image::before {
+  background-color: #12d16f;
+}
+
 .slick-slider {
   height: auto;
   max-width: 1366px;
@@ -19,7 +28,8 @@
 @media (min-width: 1366px) {
   .slick-slider {
     gap: 32px;
-    margin: 50px auto;
+    margin: 0px auto;
+    margin-bottom: 80px !important;
   }
 }
 .slick-slider .slick-track {
@@ -37,7 +47,7 @@
 }
 @media (min-width: 1366px) {
   .slick-slider .slick-track {
-    gap: 42px;
+    gap: 47px;
     margin: 25px 0px;
   }
 }
@@ -64,16 +74,25 @@
   display: block;
 }
 .slick-slider .slick-dots {
-  bottom: -40px;
+  bottom: -45px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 .slick-slider .slick-dots li button::before {
-  font-size: 2rem;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #017fd5;
+}
+.slick-slider .slick-dots li.slick-active button::before {
+  background-color: #017fd5;
+  opacity: 1;
 }
 .slick-slider .slick-list {
   max-width: 1280px;
   margin: 0 auto;
-  margin: 30px 0px;
-  min-height: 430px;
 }
 .slick-slider .slick-slide {
   position: relative;
@@ -85,10 +104,10 @@
   overflow: hidden;
   transition: height 0.3s ease;
   transition: transform 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .slick-slider .slick-slide:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transform: scale(1.1);
 }
 .slick-slider .slick-slide:hover .card-footer {
   height: auto;
@@ -135,7 +154,6 @@
   top: 0;
   left: 0;
   padding: 5px;
-  background-color: #12d16f;
   margin: -30px;
   width: 50px;
   height: 50px;
@@ -155,7 +173,7 @@
 .slick-slider .slick-slide .views-field-field-card-title {
   color: #414a55;
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 25px;
   padding-left: 30px;
   padding-right: 70px;
   font-size: 1.2rem;
@@ -166,7 +184,7 @@
 .slick-slider .slick-slide .views-field-field-date {
   color: grey;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 15px;
   padding-left: 30px;
   padding-right: 70px;
   font-size: 0.9rem;
@@ -197,6 +215,11 @@
   width: 100%;
   height: 100%;
   background: url("../../images/cloud-computing.png") no-repeat center center;
+  background-size: contain;
+  transition: background 0.3s ease;
+}
+.slick-slider .slick-slide .card-footer .card-download a:hover::before {
+  background: url("../../images/cloud-computing-blue.png") no-repeat center center;
   background-size: contain;
 }
 .slick-slider .slick-slide .card-footer .card-share,
@@ -243,6 +266,11 @@
   height: 100%;
   background: url("../../images/share-icon.png") no-repeat center center;
   background-size: contain;
+  transition: background 0.3s ease;
+}
+.slick-slider .slick-slide .card-footer .card-share a:hover::before {
+  background: url("../../images/share-icon-blue.png") no-repeat center center;
+  background-size: contain;
 }
 .slick-slider .slick-slide .card-footer .card-favourite a {
   display: inline-block;
@@ -259,6 +287,11 @@
   width: 100%;
   height: 100%;
   background: url("../../images/heart-icon.png") no-repeat center center;
+  background-size: contain;
+  transition: background 0.3s ease;
+}
+.slick-slider .slick-slide .card-footer .card-favourite a:hover::before {
+  background: url("../../images/heart-icon-blue.png") no-repeat center center;
   background-size: contain;
 }
 .slick-slider .slick-slide .views-field-field-category::before {

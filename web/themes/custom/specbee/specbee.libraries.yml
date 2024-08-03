@@ -27,3 +27,10 @@ conference-slider:
     js/script.js: {}
   dependencies:
     - specbee/slick
+
+conferences:
+  css:
+    theme:
+      css/components/conferences.css: {}
+  js:
+    js/tabs.js: {}

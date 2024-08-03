@@ -9,7 +9,7 @@
       infinite: false,
       autoplay: false,
       dots: true,
-      speed: 300,
+      speed: 500,
       responsive: [
         {
           breakpoint: 1025,

@@ -38,58 +38,74 @@ class __TwigTemplate_bc67fa7597572e8e76ae8511c32805c4 extends Template
     {
         $macros = $this->macros;
         // line 29
-        yield "<div";
-        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["attributes"] ?? null), 29, $this->source), "html", null, true);
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->extensions['Drupal\Core\Template\TwigExtension']->attachLibrary("specbee/conferences"), "html", null, true);
+        yield "
+
+<div";
+        // line 31
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["attributes"] ?? null), 31, $this->source), "html", null, true);
         yield ">
   ";
-        // line 30
-        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_prefix"] ?? null), 30, $this->source), "html", null, true);
+        // line 32
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_prefix"] ?? null), 32, $this->source), "html", null, true);
         yield "
   ";
-        // line 31
+        // line 33
         if (($context["label"] ?? null)) {
-            // line 32
+            // line 34
             yield "    <h2";
-            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_attributes"] ?? null), 32, $this->source), "html", null, true);
+            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_attributes"] ?? null), 34, $this->source), "html", null, true);
             yield ">";
-            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["label"] ?? null), 32, $this->source), "html", null, true);
+            yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["label"] ?? null), 34, $this->source), "html", null, true);
             yield "</h2>
   ";
         }
-        // line 34
+        // line 36
         yield "  ";
-        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_suffix"] ?? null), 34, $this->source), "html", null, true);
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["title_suffix"] ?? null), 36, $this->source), "html", null, true);
         yield "
   ";
-        // line 35
+        // line 37
         yield from $this->unwrap()->yieldBlock('content', $context, $blocks);
-        // line 54
-        yield "</div>
-";
+        // line 59
+        yield "</div>";
         $this->env->getExtension('\Drupal\Core\Template\TwigExtension')
-            ->checkDeprecations($context, ["attributes", "title_prefix", "label", "title_attributes", "title_suffix"]);        return; yield '';
+            ->checkDeprecations($context, ["attributes", "title_prefix", "label", "title_attributes", "title_suffix", "featured", "recommended", "past"]);        return; yield '';
     }
 
-    // line 35
+    // line 37
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
+        // line 38
         yield "    <div class=\"conferences\">
-      <h1 class=\"conferences_heading\">Lorem ipsum dolor sitamet,</h1>
-      <p class=\"conferences_subheading\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      <h1 class=\"conferences_heading\">Lorem ipsum dolor sit amet</h1>
+      <p class=\"conferences_subheading\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class=\"slider-container\">
-    <div class=\"tabs\">
-        <button class=\"tab-button\" onclick=\"showSlider('featured-slider')\">Featured</button>
-        <button class=\"tab-button\" onclick=\"showSlider('past-slider')\">Past</button>
-        <button class=\"tab-button\" onclick=\"showSlider('recommended-slider')\">Recommended</button>
-    </div>
-    <div id=\"featured-slider\" class=\"slider\">     
-    </div>
-    <div id=\"past-slider\" class=\"slider\" style=\"display:none;\"> 
-    </div>
-    <div id=\"recommended-slider\" class=\"slider\" style=\"display:none;\">  
-    </div>
-    </div>
+        <div class=\"tabs\">
+          <button class=\"tab-button active\">Featured Conferences</button>
+          <button class=\"tab-button\">Recommended Conferences</button>
+          <button class=\"tab-button\">Past Conferences</button>
+        </div>
+        <div class=\"conference-slider featured-conferences active\">
+          ";
+        // line 48
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["featured"] ?? null), 48, $this->source), "html", null, true);
+        yield "
+        </div>
+        <div class=\"conference-slider recommended-conferences\">
+          ";
+        // line 51
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["recommended"] ?? null), 51, $this->source), "html", null, true);
+        yield "
+        </div>
+        <div class=\"conference-slider past-conferences\">
+          ";
+        // line 54
+        yield $this->extensions['Drupal\Core\Template\TwigExtension']->escapeFilter($this->env, $this->sandbox->ensureToStringAllowed(($context["past"] ?? null), 54, $this->source), "html", null, true);
+        yield "
+        </div>
+      </div>
     </div>
   ";
         return; yield '';
@@ -116,7 +132,7 @@ class __TwigTemplate_bc67fa7597572e8e76ae8511c32805c4 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  74 => 35,  67 => 54,  65 => 35,  60 => 34,  52 => 32,  50 => 31,  46 => 30,  41 => 29,);
+        return array (  105 => 54,  99 => 51,  93 => 48,  81 => 38,  77 => 37,  71 => 59,  69 => 37,  64 => 36,  56 => 34,  54 => 33,  50 => 32,  46 => 31,  41 => 29,);
     }
 
     public function getSourceContext()
@@ -149,6 +165,8 @@ class __TwigTemplate_bc67fa7597572e8e76ae8511c32805c4 extends Template
  * @see template_preprocess_block()
  */
 #}
+{{ attach_library('specbee/conferences') }}
+
 <div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
@@ -157,38 +175,40 @@ class __TwigTemplate_bc67fa7597572e8e76ae8511c32805c4 extends Template
   {{ title_suffix }}
   {% block content %}
     <div class=\"conferences\">
-      <h1 class=\"conferences_heading\">Lorem ipsum dolor sitamet,</h1>
-      <p class=\"conferences_subheading\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      <h1 class=\"conferences_heading\">Lorem ipsum dolor sit amet</h1>
+      <p class=\"conferences_subheading\">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class=\"slider-container\">
-    <div class=\"tabs\">
-        <button class=\"tab-button\" onclick=\"showSlider('featured-slider')\">Featured</button>
-        <button class=\"tab-button\" onclick=\"showSlider('past-slider')\">Past</button>
-        <button class=\"tab-button\" onclick=\"showSlider('recommended-slider')\">Recommended</button>
-    </div>
-    <div id=\"featured-slider\" class=\"slider\">     
-    </div>
-    <div id=\"past-slider\" class=\"slider\" style=\"display:none;\"> 
-    </div>
-    <div id=\"recommended-slider\" class=\"slider\" style=\"display:none;\">  
-    </div>
-    </div>
+        <div class=\"tabs\">
+          <button class=\"tab-button active\">Featured Conferences</button>
+          <button class=\"tab-button\">Recommended Conferences</button>
+          <button class=\"tab-button\">Past Conferences</button>
+        </div>
+        <div class=\"conference-slider featured-conferences active\">
+          {{ featured }}
+        </div>
+        <div class=\"conference-slider recommended-conferences\">
+          {{ recommended }}
+        </div>
+        <div class=\"conference-slider past-conferences\">
+          {{ past }}
+        </div>
+      </div>
     </div>
   {% endblock %}
-</div>
-", "themes/custom/specbee/templates/block--block-content--id--specbee-conferences.html.twig", "/var/www/html/web/themes/custom/specbee/templates/block--block-content--id--specbee-conferences.html.twig");
+</div>", "themes/custom/specbee/templates/block--block-content--id--specbee-conferences.html.twig", "/var/www/html/web/themes/custom/specbee/templates/block--block-content--id--specbee-conferences.html.twig");
     }
     
     public function checkSecurity()
     {
-        static $tags = array("if" => 31, "block" => 35);
+        static $tags = array("if" => 33, "block" => 37);
         static $filters = array("escape" => 29);
-        static $functions = array();
+        static $functions = array("attach_library" => 29);
 
         try {
             $this->sandbox->checkSecurity(
                 ['if', 'block'],
                 ['escape'],
-                [],
+                ['attach_library'],
                 $this->source
             );
         } catch (SecurityError $e) {

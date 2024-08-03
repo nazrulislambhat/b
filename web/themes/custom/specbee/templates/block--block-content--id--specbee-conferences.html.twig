@@ -26,6 +26,8 @@
  * @see template_preprocess_block()
  */
 #}
+{{ attach_library('specbee/conferences') }}
+
 <div{{ attributes }}>
   {{ title_prefix }}
   {% if label %}
@@ -34,21 +36,24 @@
   {{ title_suffix }}
   {% block content %}
     <div class="conferences">
-      <h1 class="conferences_heading">Lorem ipsum dolor sitamet,</h1>
-      <p class="conferences_subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      <h1 class="conferences_heading">Lorem ipsum dolor sit amet</h1>
+      <p class="conferences_subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class="slider-container">
-    <div class="tabs">
-        <button class="tab-button" onclick="showSlider('featured-slider')">Featured</button>
-        <button class="tab-button" onclick="showSlider('past-slider')">Past</button>
-        <button class="tab-button" onclick="showSlider('recommended-slider')">Recommended</button>
-    </div>
-    <div id="featured-slider" class="slider">     
-    </div>
-    <div id="past-slider" class="slider" style="display:none;"> 
-    </div>
-    <div id="recommended-slider" class="slider" style="display:none;">  
-    </div>
-    </div>
+        <div class="tabs">
+          <button class="tab-button active">Featured Conferences</button>
+          <button class="tab-button">Recommended Conferences</button>
+          <button class="tab-button">Past Conferences</button>
+        </div>
+        <div class="conference-slider featured-conferences active">
+          {{ featured }}
+        </div>
+        <div class="conference-slider recommended-conferences">
+          {{ recommended }}
+        </div>
+        <div class="conference-slider past-conferences">
+          {{ past }}
+        </div>
+      </div>
     </div>
   {% endblock %}
 </div>

@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.conferences {
+  padding-top: 20px;
+}
+.conferences .slider-container {
+  height: 100vh;
+}
+@media (min-width: 1025px) {
+  .conferences {
+    padding-top: 60px;
+  }
+}
+.conferences_heading {
+  text-align: center;
+  color: #414a55;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+@media (min-width: 1025px) {
+  .conferences_heading {
+    font-size: 2.5rem;
+  }
+}
+.conferences_subheading {
+  text-align: center;
+  color: #414a55;
+  padding: 10px 0px;
+  font-size: 1rem;
+  padding-bottom: 40px;
+}
+@media (min-width: 1025px) {
+  .conferences_subheading {
+    font-size: 1.2rem;
+    padding-bottom: 25px;
+  }
+}
+.conferences .conference-slider {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.conferences .conference-slider.active {
+  opacity: 1;
+  height: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+.conferences .tabs {
+  text-align: center;
+  margin: 20px auto;
+  display: flex;
+  gap: 0px;
+  text-align: center;
+  justify-content: center;
+  border-bottom: 2px solid #017fd5;
+  padding-bottom: 20px;
+}
+@media (min-width: 1025px) {
+  .conferences .tabs {
+    gap: 60px;
+  }
+}
+.conferences .tabs .tab-button {
+  cursor: pointer;
+  color: #017fd5;
+  background-color: transparent;
+  border: 0px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+@media (min-width: 1025px) {
+  .conferences .tabs .tab-button {
+    font-size: 1rem;
+  }
+}
+.conferences .tabs .tab-button.active {
+  color: #414a55;
+  font-size: 1.5rem;
+}
+.conferences .tabs .tab-button.active::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #017fd5;
+  display: inline-block;
+  position: absolute;
+  background-color: transparent;
+  left: 42%;
+  transform: rotate(45deg);
+  top: 37px;
+}
+.conferences .tabs .tab-button.active::before {
+  content: "";
+  width: 25px;
+  height: 26px;
+  background: white;
+  display: inline-block;
+  position: absolute;
+  left: 42%;
+  z-index: 9;
+  top: 32px;
+  transform: rotate(45deg);
+}
+/*# sourceMappingURL=conferences.css.map */

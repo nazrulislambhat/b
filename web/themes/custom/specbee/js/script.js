@@ -4,15 +4,16 @@
       var priceField = $(this).find(".views-field-field-price");
       var price = priceField.text().trim();
 
-      if (price === "") {
-        priceField.text("FREE");
+      // Checking if the card is inside a .past-conferences div
+      if ($(this).closest(".past-conferences").length > 0) {
+        priceField.hide(); // Hiding the price field if it's in a past-conferences div
       } else {
-        priceField.text("₹" + price);
+        if (price === "") {
+          priceField.text("FREE");
+        } else {
+          priceField.text("₹" + " " + price);
+        }
       }
-
-      $(this).on("click", function () {
-        console.log("You clicked on a conferences card");
-      });
     });
   });
 })(jQuery);
