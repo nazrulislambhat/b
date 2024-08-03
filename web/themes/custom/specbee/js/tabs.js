@@ -1,23 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".conference-slider");
+  const buttons = document.querySelectorAll(".tab-button");
+
   function showSlider(index) {
-    document.querySelectorAll(".conference-slider").forEach((slider) => {
-      slider.classList.remove("active");
+    sliders.forEach((slider, i) => {
+      slider.classList.toggle("active", i === index);
     });
-    document.querySelectorAll(".tab-button").forEach((button) => {
-      button.classList.remove("active");
+    buttons.forEach((button, i) => {
+      button.classList.toggle("active", i === index);
     });
-    document
-      .querySelectorAll(".conference-slider")
-      [index].classList.add("active");
-    document.querySelectorAll(".tab-button")[index].classList.add("active");
   }
-  document.querySelectorAll(".tab-button").forEach((button, index) => {
-    button.addEventListener("click", () => {
-      showSlider(index);
-    });
+
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => showSlider(index));
   });
-  const activeIndex = Array.from(
-    document.querySelectorAll(".tab-button")
-  ).findIndex((button) => button.classList.contains("active"));
+
+  const activeIndex = Array.from(buttons).findIndex((button) =>
+    button.classList.contains("active")
+  );
   showSlider(activeIndex >= 0 ? activeIndex : 0);
 });
