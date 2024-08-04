@@ -192,6 +192,11 @@
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
+  min-height: 200px;
+}
+.slick-slider .slick-slide .views-field-field-card-image span {
+  font-size: 1.6rem;
+  color: #414a55;
 }
 .slick-slider .slick-slide .views-field-field-card-image img {
   width: 100%;

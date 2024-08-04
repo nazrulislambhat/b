@@ -188,6 +188,11 @@
       position: relative;
       overflow: hidden;
       transition: transform 0.3s ease;
+      min-height: 200px;
+      span {
+        font-size: 1.6rem;
+        color: $dark-grey-color;
+      }
       img {
         width: 100%;
         max-height: 200px;

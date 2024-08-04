@@ -23,8 +23,9 @@
 
     // Iterate over each conference card
     $(".conferences-card").each(function () {
-      var priceField = $(this).find(".views-field-field-price"); // Find the price field within the card
-      var price = priceField.text().trim(); // Get the trimmed text content of the price field
+      let priceField = $(this).find(".views-field-field-price"); // Find the price field within the card
+      let price = priceField.text().trim(); // Get the trimmed text content of the price field
+      let imageField = $(this).find("views-field-field-card-image"); // Find the image field within the card
 
       // Check if the card is inside a .past-conferences div
       if ($(this).closest(".past-conferences").length > 0) {
