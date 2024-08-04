@@ -40,6 +40,9 @@
   @include breakpoint(tablet) {
     margin: 0px 16px;
   }
+  @include breakpoint(small-desktop) {
+    margin: 16px 24px;
+  }
   @include breakpoint(desktop) {
     gap: 32px;
     margin: 0px auto;
@@ -47,11 +50,12 @@
   }
   .slick-track {
     display: flex;
+    justify-content: center;
     @include breakpoint(tablet) {
       gap: 16px;
     }
     @include breakpoint(small-desktop) {
-      gap: 32px;
+      gap: 12px;
     }
     @include breakpoint(desktop) {
       gap: 20px;
@@ -112,6 +116,9 @@
     max-width: 1280px;
     margin: 16px auto;
     @include breakpoint(small-desktop) {
+      margin-bottom: 60px;
+    }
+    @include breakpoint(desktop) {
       margin: 0 auto;
     }
   }
@@ -122,10 +129,14 @@
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
-    margin: 0px 16px !important;
+    margin: 0px 12px !important;
     overflow: hidden;
     margin: 0 auto;
     transition: height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+
+    @include breakpoint(desktop) {
+      margin: 0px 16px !important;
+    }
     &:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       .views-field-field-card-image {
@@ -148,6 +159,12 @@
       width: 100%;
       min-width: 348px;
       max-width: none;
+      margin: 0;
+    }
+    @include breakpoint(small-desktop) {
+      width: auto !important;
+      min-width: 287px;
+      max-width: max-content;
       margin: 0;
     }
     @include breakpoint(desktop) {
@@ -183,6 +200,12 @@
       padding-right: 70px;
       padding-top: 25px;
       transition: transform 0.3s ease, height 0.3s ease;
+      @include breakpoint(small-desktop) {
+        padding-right: 20px;
+      }
+      @include breakpoint(desktop) {
+        padding-right: 70px;
+      }
       .card-title {
         color: $dark-grey-color;
         font-weight: 700;
@@ -234,12 +257,16 @@
       .card-share,
       .card-download,
       .card-favourite {
-        height: 50px;
-        width: 72px;
+        height: 40px;
+        width: 62px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-right: 1px solid rgba(0, 0, 0, 0.1);
+        @include breakpoint(desktop) {
+          height: 50px;
+          width: 72px;
+        }
       }
       .card-view-details {
         margin: 0 auto;

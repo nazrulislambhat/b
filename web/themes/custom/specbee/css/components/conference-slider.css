@@ -36,6 +36,11 @@
     margin: 0px 16px;
   }
 }
+@media (min-width: 1025px) {
+  .slick-slider {
+    margin: 16px 24px;
+  }
+}
 @media (min-width: 1440px) {
   .slick-slider {
     gap: 32px;
@@ -45,6 +50,7 @@
 }
 .slick-slider .slick-track {
   display: flex;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .slick-slider .slick-track {
@@ -53,7 +59,7 @@
 }
 @media (min-width: 1025px) {
   .slick-slider .slick-track {
-    gap: 32px;
+    gap: 12px;
   }
 }
 @media (min-width: 1440px) {
@@ -106,6 +112,11 @@
 }
 @media (min-width: 1025px) {
   .slick-slider .slick-list {
+    margin-bottom: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .slick-slider .slick-list {
     margin: 0 auto;
   }
 }
@@ -115,10 +126,15 @@
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
-  margin: 0px 16px !important;
+  margin: 0px 12px !important;
   overflow: hidden;
   margin: 0 auto;
   transition: height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+}
+@media (min-width: 1440px) {
+  .slick-slider .slick-slide {
+    margin: 0px 16px !important;
+  }
 }
 .slick-slider .slick-slide:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -143,6 +159,14 @@
     width: 100%;
     min-width: 348px;
     max-width: none;
+    margin: 0;
+  }
+}
+@media (min-width: 1025px) {
+  .slick-slider .slick-slide {
+    width: auto !important;
+    min-width: 287px;
+    max-width: max-content;
     margin: 0;
   }
 }
@@ -180,6 +204,16 @@
   padding-right: 70px;
   padding-top: 25px;
   transition: transform 0.3s ease, height 0.3s ease;
+}
+@media (min-width: 1025px) {
+  .slick-slider .slick-slide .card-body {
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .slick-slider .slick-slide .card-body {
+    padding-right: 70px;
+  }
 }
 .slick-slider .slick-slide .card-body .card-title {
   color: #414a55;
@@ -229,12 +263,20 @@
 .slick-slider .slick-slide .card-footer .card-share,
 .slick-slider .slick-slide .card-footer .card-download,
 .slick-slider .slick-slide .card-footer .card-favourite {
-  height: 50px;
-  width: 72px;
+  height: 40px;
+  width: 62px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1440px) {
+  .slick-slider .slick-slide .card-footer .card-share,
+  .slick-slider .slick-slide .card-footer .card-download,
+  .slick-slider .slick-slide .card-footer .card-favourite {
+    height: 50px;
+    width: 72px;
+  }
 }
 .slick-slider .slick-slide .card-footer .card-view-details {
   margin: 0 auto;

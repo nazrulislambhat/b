@@ -64,6 +64,16 @@
   opacity: 1;
   transform: translateY(0);
 }
+@media (min-width: 1025px) {
+  .conferences .conference-slider.active {
+    padding: 0px 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .conferences .conference-slider.active {
+    padding: auto;
+  }
+}
 .conferences .tabs {
   text-align: center;
   margin: 20px 15px;

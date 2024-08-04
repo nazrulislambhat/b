@@ -49,6 +49,12 @@
     height: auto;
     opacity: 1;
     transform: translateY(0);
+    @include breakpoint(small-desktop) {
+      padding: 0px 30px;
+    }
+    @include breakpoint(desktop) {
+      padding: auto;
+    }
   }
   .tabs {
     text-align: center;
@@ -108,7 +114,6 @@
         left: 42%;
         transform: rotate(45deg);
         top: 53px;
-
       }
       &::before {
         content: "";
@@ -121,7 +126,6 @@
         z-index: 9;
         top: 48px;
         transform: rotate(45deg);
-
       }
     }
   }
