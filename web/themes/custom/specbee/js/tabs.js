@@ -1,22 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const sliders = document.querySelectorAll(".conference-slider");
-  const buttons = document.querySelectorAll(".tab-button");
+$(document).ready(function () {
+  const $sliders = $(".conference-slider");
+  const $buttons = $(".tab-button");
 
   function showSlider(index) {
-    sliders.forEach((slider, i) => {
-      slider.classList.toggle("active", i === index);
-    });
-    buttons.forEach((button, i) => {
-      button.classList.toggle("active", i === index);
-    });
+    $sliders.removeClass("active").eq(index).addClass("active");
+    $buttons.removeClass("active").eq(index).addClass("active");
   }
 
-  buttons.forEach((button, index) => {
-    button.addEventListener("click", () => showSlider(index));
+  $buttons.on("click", function () {
+    const index = $buttons.index(this);
+    showSlider(index);
   });
 
-  const activeIndex = Array.from(buttons).findIndex((button) =>
-    button.classList.contains("active")
-  );
+  const activeIndex = $buttons.index($buttons.filter(".active"));
   showSlider(activeIndex >= 0 ? activeIndex : 0);
 });
