@@ -1,6 +1,6 @@
 (function ($) {
   $(document).ready(function () {
-    $(".slick-slider").slick({
+    $(".slick-slider").slick({ // Initialize the slick slider
       slidesToShow: 3,
       slidesToScroll: 1,
       arrows: true,
